@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 2.83.0 commit date:1970-01-01, commit time:00:00, hash:unknown</authoring_tool>
+    </contributor>
+    <created>2020-06-28T16:52:50</created>
+    <modified>2020-06-28T16:52:50</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="Cristal_1-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <color sid="diffuse">0.8 0.8 0.8 1</color>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Cristal_2-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <color sid="diffuse">0.8 0.8 0.8 1</color>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Cristal_3-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <color sid="diffuse">0.8 0.8 0.8 1</color>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images/>
+  <library_materials>
+    <material id="Cristal_1-material" name="Cristal_1">
+      <instance_effect url="#Cristal_1-effect"/>
+    </material>
+    <material id="Cristal_2-material" name="Cristal_2">
+      <instance_effect url="#Cristal_2-effect"/>
+    </material>
+    <material id="Cristal_3-material" name="Cristal_3">
+      <instance_effect url="#Cristal_3-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="Circle_010-mesh" name="Circle.010">
+      <mesh>
+        <source id="Circle_010-mesh-positions">
+          <float_array id="Circle_010-mesh-positions-array" count="72">0 0.0999999 -0.1483978 -0.0866025 0.04999995 -0.1483978 -0.0866025 -0.04999995 -0.1483978 0 -0.0999999 -0.1483978 0.0866025 -0.04999995 -0.1483978 0.0866025 0.04999995 -0.1483978 0 0.0999999 0.1516077 -0.0866025 0.04999995 0.1516077 -0.0866025 -0.04999995 0.1516077 0 -0.0999999 0.1516077 0.0866025 -0.04999995 0.1516077 0.0866025 0.04999995 0.1516077 0 -9.53674e-7 0.2336942 0 -9.53674e-7 0.2336942 0 -9.53674e-7 0.2336942 0 -9.53674e-7 0.2336942 0 -9.53674e-7 0.2336942 0 -9.53674e-7 0.2336942 0 -9.53674e-7 -0.236904 0 -9.53674e-7 -0.236904 0 -9.53674e-7 -0.236904 0 -9.53674e-7 -0.236904 0 -9.53674e-7 -0.236904 0 -9.53674e-7 -0.236904</float_array>
+          <technique_common>
+            <accessor source="#Circle_010-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Circle_010-mesh-normals">
+          <float_array id="Circle_010-mesh-normals-array" count="87">-0.4999997 -0.8660257 0 -0.4999997 0.8660256 0 1 1.24174e-7 0 -1 0 0 0.4999997 0.8660258 0 0.4999997 -0.8660257 0 -0.68793 0 -0.7257771 0 -0.6344832 0.7729368 0 0 1 -0.3439632 -0.5957622 -0.7257801 -0.3439667 0.5957681 -0.7257736 0 0.6627655 0.748827 0.7147517 0 0.6993784 0.3573772 0.6189965 0.6993746 0.3573743 -0.6189906 0.6993814 -0.4999997 -0.8660257 0 -0.4999997 0.8660256 0 1 0 0 0.4999997 0.8660257 0 0.4999997 -0.8660257 0 0.3439667 0.5957682 -0.7257735 0.3439631 -0.5957622 -0.7257801 0 0 -1 0 0.6344832 -0.7729368 0.6879299 0 -0.7257772 -0.3573743 -0.6189906 0.6993814 -0.3573773 0.6189965 0.6993747 -0.7147517 0 0.6993783 0 -0.6627655 -0.748827</float_array>
+          <technique_common>
+            <accessor source="#Circle_010-mesh-normals-array" count="29" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Circle_010-mesh-map-0">
+          <float_array id="Circle_010-mesh-map-0-array" count="216">0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</float_array>
+          <technique_common>
+            <accessor source="#Circle_010-mesh-map-0-array" count="108" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Circle_010-mesh-vertices">
+          <input semantic="POSITION" source="#Circle_010-mesh-positions"/>
+        </vertices>
+        <triangles material="Cristal_1-material" count="36">
+          <input semantic="VERTEX" source="#Circle_010-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Circle_010-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Circle_010-mesh-map-0" offset="2" set="0"/>
+          <p>5 0 0 6 0 1 0 0 2 3 1 3 10 1 4 4 1 5 1 2 6 8 2 7 2 2 8 4 3 9 11 3 10 5 3 11 2 4 12 9 4 13 3 4 14 0 5 15 7 5 16 1 5 17 10 6 18 17 6 19 11 6 20 9 7 21 14 7 22 15 7 23 7 8 24 12 8 25 13 8 26 11 9 27 12 9 28 6 9 29 9 10 30 16 10 31 10 10 32 8 8 33 13 8 34 14 8 35 5 8 36 18 8 37 23 8 38 3 11 39 22 11 40 21 11 41 2 12 42 19 12 43 1 12 44 4 8 45 23 8 46 22 8 47 3 13 48 20 13 49 2 13 50 1 14 51 18 14 52 0 14 53 5 15 54 11 15 55 6 15 56 3 16 57 9 16 58 10 16 59 1 17 60 7 17 61 8 17 62 4 3 63 10 3 64 11 3 65 2 18 66 8 18 67 9 18 68 0 19 69 6 19 70 7 19 71 10 8 72 16 8 73 17 8 74 9 20 75 8 20 76 14 20 77 7 21 78 6 21 79 12 21 80 11 22 81 17 22 82 12 22 83 9 23 84 15 23 85 16 23 86 8 24 87 7 24 88 13 24 89 5 25 90 0 25 91 18 25 92 3 26 93 4 26 94 22 26 95 2 8 96 20 8 97 19 8 98 4 27 99 5 27 100 23 27 101 3 28 102 21 28 103 20 28 104 1 22 105 19 22 106 18 22 107</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="Cristal" name="Cristal" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#Circle_010-mesh" name="Cristal">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Cristal_1-material" target="#Cristal_1-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="Cristal_2-material" target="#Cristal_2-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="Cristal_3-material" target="#Cristal_3-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>
