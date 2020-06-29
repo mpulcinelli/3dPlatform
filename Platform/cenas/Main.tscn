@@ -1,9 +1,14 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://cenas/assets_platforms.tscn" type="PackedScene" id=1]
 [ext_resource path="res://cenas/cristais.tscn" type="PackedScene" id=2]
+[ext_resource path="res://cenas/inimigos.tscn" type="PackedScene" id=3]
+[ext_resource path="res://cenas/personagem.tscn" type="PackedScene" id=4]
+[ext_resource path="res://cenas/personagem.gd" type="Script" id=5]
+[ext_resource path="res://cenas/Main.gd" type="Script" id=6]
 
 [node name="Main" type="Node"]
+script = ExtResource( 6 )
 
 [node name="Terreno" type="Spatial" parent="."]
 
@@ -11,7 +16,14 @@
 
 [node name="Inimigos" type="Spatial" parent="."]
 
+[node name="inimigo_vermelho" parent="Inimigos" instance=ExtResource( 3 )]
+transform = Transform( 1.11308, 0, 0, 0, 1, 0, 0, 0, 1, -42.2741, 1.02203, 0 )
+
 [node name="Personagem" type="Spatial" parent="."]
+
+[node name="Player" parent="Personagem" instance=ExtResource( 4 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -51.8643, 10.3228, 0 )
+script = ExtResource( 5 )
 
 [node name="Cristais" type="Spatial" parent="."]
 
@@ -23,3 +35,10 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 48.9247, 4.64554, 0 )
 [node name="Sons" type="Node" parent="."]
 
 [node name="Camera" type="Spatial" parent="."]
+
+[node name="Camera" type="Camera" parent="Camera"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -43.565, 8.029, 15.464 )
+[connection signal="area_entered" from="Personagem/Player/Damage" to="." method="_on_Damage_area_entered"]
+[connection signal="area_entered" from="Personagem/Player/DamageCauser" to="." method="_on_DamageCauser_area_entered"]
+
+[editable path="Personagem/Player"]

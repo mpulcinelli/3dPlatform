@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://assets/SAPATO_PLAYER.material" type="Material" id=1]
 [ext_resource path="res://assets/VESTIDO.material" type="Material" id=2]
@@ -287,7 +287,7 @@ tracks/11/imported = true
 tracks/11/enabled = true
 tracks/11/keys = PoolRealArray( 0, 1, -2.84217e-14, 0, 0, -1.49011e-08, -2.84217e-14, -3.55271e-15, 1, 1, 1, 1 )
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=5]
 resource_name = "JUMP"
 length = 0.1
 tracks/0/type = "transform"
@@ -375,8 +375,7 @@ tracks/11/imported = true
 tracks/11/enabled = true
 tracks/11/keys = PoolRealArray(  )
 
-[sub_resource type="Animation" id=5]
-resource_name = "WALK"
+[sub_resource type="Animation" id=6]
 length = 0.85
 loop = true
 tracks/0/type = "transform"
@@ -464,7 +463,16 @@ tracks/11/imported = true
 tracks/11/enabled = true
 tracks/11/keys = PoolRealArray(  )
 
-[node name="personagem" type="Spatial"]
+[sub_resource type="BoxShape" id=7]
+extents = Vector3( 0.436013, 1, 0.395454 )
+
+[sub_resource type="BoxShape" id=8]
+extents = Vector3( 0.436433, 1, 0.364219 )
+
+[sub_resource type="BoxShape" id=9]
+extents = Vector3( 0.234719, 0.0637508, 0.170968 )
+
+[node name="Player" type="KinematicBody"]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0, 0, 0 )
 
 [node name="Armature" type="Spatial" parent="."]
@@ -541,8 +549,24 @@ material/3 = null
 material/4 = null
 
 [node name="Anim" type="AnimationPlayer" parent="."]
-autoplay = "WALK"
+autoplay = "IDLE"
 anims/ArmatureAction = SubResource( 3 )
 anims/IDLE = SubResource( 4 )
-anims/JUMP = SubResource( 6 )
-anims/WALK = SubResource( 5 )
+anims/JUMP = SubResource( 5 )
+anims/WALK = SubResource( 6 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.70933e-09, 0.0946385, -0.0473194 )
+shape = SubResource( 7 )
+
+[node name="Damage" type="Area" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="Damage"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.71633e-09, 0.0851976, -0.0596383 )
+shape = SubResource( 8 )
+
+[node name="DamageCauser" type="Area" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="DamageCauser"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.962056, 0 )
+shape = SubResource( 9 )

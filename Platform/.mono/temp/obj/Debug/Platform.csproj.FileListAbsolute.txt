@@ -1,0 +1,6 @@
+/home/mpulcinelli/develop/personal/games/3dPlatform/Platform/.mono/temp/bin/Debug/Platform.dll
+/home/mpulcinelli/develop/personal/games/3dPlatform/Platform/.mono/temp/bin/Debug/Platform.pdb
+/home/mpulcinelli/develop/personal/games/3dPlatform/Platform/.mono/temp/obj/Debug/Platform.csprojAssemblyReference.cache
+/home/mpulcinelli/develop/personal/games/3dPlatform/Platform/.mono/temp/obj/Debug/Platform.csproj.CoreCompileInputs.cache
+/home/mpulcinelli/develop/personal/games/3dPlatform/Platform/.mono/temp/obj/Debug/Platform.dll
+/home/mpulcinelli/develop/personal/games/3dPlatform/Platform/.mono/temp/obj/Debug/Platform.pdb
